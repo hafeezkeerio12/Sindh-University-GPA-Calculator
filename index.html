@@ -22,6 +22,7 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     background:#f5faf8;
     color:#17332a;
+    transition:.3s ease;
 }
 
 /* ================= NAVBAR ================= */
@@ -37,6 +38,7 @@ body{
     position:sticky;
     top:0;
     z-index:1000;
+    transition:.3s ease;
 }
 
 .brand{
@@ -88,6 +90,7 @@ body{
     background:#edf5f1;
     cursor:pointer;
     font-size:17px;
+    transition:.3s ease;
 }
 
 /* ================= HERO ================= */
@@ -97,6 +100,7 @@ body{
     padding:80px 8%;
     display:flex;
     align-items:center;
+
     background:
         radial-gradient(
             circle at 85% 20%,
@@ -104,6 +108,8 @@ body{
             transparent 32%
         ),
         #f5faf8;
+
+    transition:.3s ease;
 }
 
 .hero-content{
@@ -177,10 +183,11 @@ body{
     color:#087451;
 }
 
-/* ================= GENERAL SECTION ================= */
+/* ================= SECTIONS ================= */
 
 .section{
     padding:75px 7%;
+    transition:.3s ease;
 }
 
 .green-section{
@@ -220,6 +227,7 @@ body{
     border-radius:18px;
     padding:22px;
     box-shadow:0 12px 35px rgba(0,0,0,.04);
+    transition:.3s ease;
 }
 
 .panel-header{
@@ -273,6 +281,7 @@ td{
     border-radius:8px;
     outline:none;
     background:white;
+    color:#17332a;
 }
 
 .input:focus,
@@ -353,7 +362,7 @@ td{
     font-size:18px;
 }
 
-/* ================= SAVED SEMESTERS ================= */
+/* ================= SAVED ================= */
 
 .saved{
     margin-top:25px;
@@ -409,7 +418,7 @@ td{
     color:#b72f2f;
 }
 
-/* ================= EDIT BOX ================= */
+/* ================= EDIT ================= */
 
 .edit-box{
     margin-top:20px;
@@ -630,13 +639,10 @@ td{
         #102f27
     );
     border:1px solid #2a5549;
-
     display:flex;
     align-items:center;
     gap:30px;
 }
-
-/* DEVELOPER PHOTO */
 
 .developer-photo{
     width:120px;
@@ -688,10 +694,6 @@ td{
     text-decoration:none;
     font-size:13px;
     font-weight:bold;
-}
-
-.contact-developer:hover{
-    background:#096047;
 }
 
 /* ================= FOOTER ================= */
@@ -760,6 +762,216 @@ footer span{
     color:#b72f2f;
     font-size:22px;
     cursor:pointer;
+}
+
+/* ==================================================
+   DARK MODE
+   ONLY THEME BUTTON CONTROLS THIS
+================================================== */
+
+body.dark{
+    background:#101715;
+    color:#edf5f1;
+}
+
+body.dark .navbar{
+    background:#18221e;
+    border-color:#2b3933;
+}
+
+body.dark .brand-title{
+    color:#edf5f1;
+}
+
+body.dark .brand-subtitle{
+    color:#9aaba4;
+}
+
+body.dark .nav-links a{
+    color:#d3dfda;
+}
+
+body.dark .nav-links a:hover{
+    color:#65d3ad;
+}
+
+body.dark .theme-btn{
+    background:#26352f;
+    color:white;
+}
+
+body.dark .hero{
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            #183d32,
+            transparent 32%
+        ),
+        #101715;
+}
+
+body.dark .hero h1{
+    color:#edf5f1;
+}
+
+body.dark .hero p{
+    color:#aabbb4;
+}
+
+body.dark .badge{
+    background:#193a30;
+    color:#71d6b2;
+}
+
+body.dark .secondary{
+    background:#18221e;
+    color:#72d6b2;
+    border-color:#394740;
+}
+
+body.dark .secondary:hover{
+    background:#22312b;
+}
+
+body.dark .green-section{
+    background:#14201c;
+}
+
+body.dark .heading h2{
+    color:#edf5f1;
+}
+
+body.dark .heading p{
+    color:#9eafa8;
+}
+
+body.dark .panel{
+    background:#18221e;
+    border-color:#2b3933;
+    box-shadow:0 12px 35px rgba(0,0,0,.20);
+}
+
+body.dark .panel-header h3{
+    color:#edf5f1;
+}
+
+body.dark .panel-header small{
+    color:#9aaba4;
+}
+
+body.dark th{
+    background:#202c27;
+    color:#edf5f1;
+}
+
+body.dark td{
+    border-color:#2b3933;
+    color:#d9e4df;
+}
+
+body.dark .input,
+body.dark .select{
+    background:#202b27;
+    color:white;
+    border-color:#394740;
+}
+
+body.dark .input::placeholder{
+    color:#87968f;
+}
+
+body.dark .result{
+    background:#19382e;
+}
+
+body.dark .result small{
+    color:#a8bdb4;
+}
+
+body.dark .stat strong{
+    color:#edf5f1;
+}
+
+body.dark .saved-item{
+    background:#141e1a;
+    border-color:#2b3933;
+    color:#e1ebe7;
+}
+
+body.dark .saved-item small{
+    color:#899b93;
+}
+
+body.dark .edit-box{
+    background:#141e1a;
+    border-color:#2b3933;
+}
+
+body.dark .close-edit{
+    background:#26332e;
+    color:#edf5f1;
+}
+
+body.dark .contact-section{
+    background:#101715;
+}
+
+body.dark .contact-form{
+    background:#18221e;
+    border-color:#2b3933;
+}
+
+body.dark .contact-form h2{
+    color:#edf5f1;
+}
+
+body.dark .contact-form > p{
+    color:#9eafa8;
+}
+
+body.dark .form-group label{
+    color:#dce7e2;
+}
+
+body.dark .form-group input,
+body.dark .form-group textarea{
+    background:#202b27;
+    color:white;
+    border-color:#394740;
+}
+
+body.dark .form-group input::placeholder,
+body.dark .form-group textarea::placeholder{
+    color:#87968f;
+}
+
+body.dark .form-note{
+    color:#899b93;
+}
+
+body.dark .modal-box{
+    background:#18221e;
+    color:#edf5f1;
+}
+
+body.dark .modal-box th{
+    background:#202c27;
+}
+
+body.dark .modal-box td{
+    border-color:#2b3933;
+}
+
+body.dark .close-modal{
+    background:#402a2a;
+}
+
+body.dark .developer{
+    background:#091c17;
+}
+
+body.dark footer{
+    background:#061812;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -849,9 +1061,7 @@ footer span{
 </style>
 </head>
 
-
 <body>
-
 
 <!-- ================= NAVBAR ================= -->
 
@@ -879,7 +1089,6 @@ footer span{
 
     </div>
 
-
     <div class="nav-links">
 
         <a href="#gpa">GPA</a>
@@ -894,10 +1103,12 @@ footer span{
 
     </div>
 
+    <!-- DARK MODE BUTTON -->
 
     <button
         class="theme-btn"
         id="themeBtn"
+        type="button"
     >
         🌙
     </button>
@@ -931,6 +1142,7 @@ footer span{
             <button
                 class="btn primary"
                 id="goGpa"
+                type="button"
             >
                 Calculate GPA →
             </button>
@@ -938,6 +1150,7 @@ footer span{
             <button
                 class="btn secondary"
                 id="goCgpa"
+                type="button"
             >
                 Calculate CGPA
             </button>
@@ -951,10 +1164,7 @@ footer span{
 
 <!-- ================= GPA ================= -->
 
-<section
-    class="section"
-    id="gpa"
->
+<section class="section" id="gpa">
 
     <div class="heading">
 
@@ -972,7 +1182,6 @@ footer span{
         </p>
 
     </div>
-
 
     <div class="panel">
 
@@ -993,12 +1202,12 @@ footer span{
             <button
                 class="btn green-light"
                 id="addSubject"
+                type="button"
             >
                 + Add Subject
             </button>
 
         </div>
-
 
         <div class="table-wrap">
 
@@ -1026,12 +1235,12 @@ footer span{
 
         </div>
 
-
         <div class="actions">
 
             <button
                 class="btn primary"
                 id="calculate"
+                type="button"
             >
                 Calculate GPA
             </button>
@@ -1039,12 +1248,12 @@ footer span{
             <button
                 class="btn secondary"
                 id="reset"
+                type="button"
             >
                 Reset
             </button>
 
         </div>
-
 
         <div class="result">
 
@@ -1067,7 +1276,6 @@ footer span{
 
             </div>
 
-
             <div class="stats">
 
                 <div class="stat">
@@ -1082,7 +1290,6 @@ footer span{
 
                 </div>
 
-
                 <div class="stat">
 
                     <small>
@@ -1094,7 +1301,6 @@ footer span{
                     </strong>
 
                 </div>
-
 
                 <div class="stat">
 
@@ -1112,7 +1318,6 @@ footer span{
 
         </div>
 
-
         <div
             class="actions hidden"
             id="resultActions"
@@ -1121,6 +1326,7 @@ footer span{
             <button
                 class="btn green-light"
                 id="saveSemester"
+                type="button"
             >
                 💾 Save Semester
             </button>
@@ -1128,6 +1334,7 @@ footer span{
             <button
                 class="btn primary"
                 id="nextSemester"
+                type="button"
             >
                 ➜ Next Semester
             </button>
@@ -1135,6 +1342,7 @@ footer span{
             <button
                 class="btn secondary"
                 id="download"
+                type="button"
             >
                 ⬇ Download
             </button>
@@ -1142,12 +1350,12 @@ footer span{
             <button
                 class="btn secondary"
                 id="print"
+                type="button"
             >
                 🖨 Print
             </button>
 
         </div>
-
 
         <div
             class="saved"
@@ -1155,7 +1363,7 @@ footer span{
         ></div>
 
 
-        <!-- EDIT -->
+        <!-- EDIT BOX -->
 
         <div
             class="edit-box hidden"
@@ -1179,12 +1387,12 @@ footer span{
                 <button
                     class="close-edit"
                     id="closeEdit"
+                    type="button"
                 >
                     ×
                 </button>
 
             </div>
-
 
             <div class="table-wrap">
 
@@ -1211,12 +1419,12 @@ footer span{
 
             </div>
 
-
             <div class="actions">
 
                 <button
                     class="btn primary"
                     id="saveChanges"
+                    type="button"
                 >
                     ✓ Save Changes
                 </button>
@@ -1224,6 +1432,7 @@ footer span{
                 <button
                     class="btn secondary"
                     id="cancelEdit"
+                    type="button"
                 >
                     Cancel
                 </button>
@@ -1261,12 +1470,12 @@ footer span{
 
     </div>
 
-
     <div class="panel cgpa-box">
 
         <button
             class="btn primary"
             id="calculateCgpa"
+            type="button"
         >
             Calculate CGPA
         </button>
@@ -1311,9 +1520,7 @@ footer span{
 
     </div>
 
-
     <div class="contact-container">
-
 
         <div class="contact-info">
 
@@ -1330,7 +1537,6 @@ footer span{
                 GPA Calculator and make it more useful
                 for students.
             </p>
-
 
             <div class="contact-details">
 
@@ -1354,7 +1560,6 @@ footer span{
 
                 </div>
 
-
                 <div class="contact-item">
 
                     <div class="contact-icon">
@@ -1368,13 +1573,12 @@ footer span{
                         </small>
 
                         <span>
-                            Hyderabad,Sindh 
+                            Hyderabad,Sindh
                         </span>
 
                     </div>
 
                 </div>
-
 
                 <div class="contact-item">
 
@@ -1401,8 +1605,6 @@ footer span{
         </div>
 
 
-        <!-- CONTACT FORM -->
-
         <div class="contact-form">
 
             <h2>
@@ -1414,7 +1616,6 @@ footer span{
                 Your email application will open
                 with the message prepared.
             </p>
-
 
             <form id="contactForm">
 
@@ -1435,7 +1636,6 @@ footer span{
 
                     </div>
 
-
                     <div class="form-group">
 
                         <label>
@@ -1453,7 +1653,6 @@ footer span{
 
                 </div>
 
-
                 <div class="form-group">
 
                     <label>
@@ -1467,7 +1666,6 @@ footer span{
                     >
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -1483,14 +1681,12 @@ footer span{
 
                 </div>
 
-
                 <button
                     class="send-btn"
                     type="submit"
                 >
                     ✈ Send Message
                 </button>
-
 
                 <div class="form-note">
                     Your default email application will open.
@@ -1514,15 +1710,11 @@ footer span{
 
     <div class="developer-card">
 
-
-        <!-- YOUR PHOTO -->
-
         <img
-        src="developerphoto.jpg"
-    class="developer-photo"
-    alt="Hafeezullah Keerio"
->
-
+            src="developerphoto.jpg"
+            class="developer-photo"
+            alt="Hafeezullah Keerio"
+        >
 
         <div class="developer-info">
 
@@ -1603,12 +1795,12 @@ footer span{
             <button
                 class="close-modal"
                 id="closeGrading"
+                type="button"
             >
                 ×
             </button>
 
         </div>
-
 
         <table>
 
@@ -1631,7 +1823,6 @@ footer span{
                 </tr>
 
             </thead>
-
 
             <tbody>
 
@@ -1704,72 +1895,24 @@ footer span{
 
 const grades = [
 
-    {
-        min:85,
-        grade:"A+",
-        qp:4.00
-    },
-
-    {
-        min:80,
-        grade:"A",
-        qp:3.60
-    },
-
-    {
-        min:75,
-        grade:"B+",
-        qp:3.20
-    },
-
-    {
-        min:70,
-        grade:"B",
-        qp:2.80
-    },
-
-    {
-        min:65,
-        grade:"C+",
-        qp:2.40
-    },
-
-    {
-        min:60,
-        grade:"C",
-        qp:2.00
-    },
-
-    {
-        min:55,
-        grade:"D+",
-        qp:1.50
-    },
-
-    {
-        min:50,
-        grade:"D",
-        qp:1.00
-    },
-
-    {
-        min:0,
-        grade:"F",
-        qp:0.00
-    }
+    {min:85, grade:"A+", qp:4.00},
+    {min:80, grade:"A",  qp:3.60},
+    {min:75, grade:"B+", qp:3.20},
+    {min:70, grade:"B",  qp:2.80},
+    {min:65, grade:"C+", qp:2.40},
+    {min:60, grade:"C",  qp:2.00},
+    {min:55, grade:"D+", qp:1.50},
+    {min:50, grade:"D",  qp:1.00},
+    {min:0,  grade:"F",  qp:0.00}
 
 ];
 
-
 let semesterNumber = 1;
-
 let editingIndex = -1;
 
 let savedSemesters =
 JSON.parse(
-    localStorage.getItem(
-        "sindhGPASemesters"
-    )
+    localStorage.getItem("sindhGPASemesters")
 ) || [];
 
 
@@ -1778,8 +1921,7 @@ JSON.parse(
 function getGrade(marks){
 
     return grades.find(
-        item =>
-        Number(marks) >= item.min
+        item => Number(marks) >= item.min
     );
 
 }
@@ -1789,47 +1931,39 @@ function getGrade(marks){
 
 function addSubject(data = {}){
 
-    const row =
-    document.createElement("tr");
-
+    const row = document.createElement("tr");
 
     row.innerHTML = `
 
         <td class="number"></td>
 
         <td>
-
             <input
                 class="input subject"
                 placeholder="Subject name"
                 value="${data.subject || ""}"
             >
-
         </td>
 
         <td>
-
             <input
                 class="input credit"
                 type="number"
                 min="1"
-                placeholder="3"
+                placeholder="2 or 3"
                 value="${data.credit || ""}"
             >
-
         </td>
 
         <td>
-
             <input
                 class="input marks"
                 type="number"
                 min="0"
                 max="100"
-                placeholder="82"
+                placeholder="eg 75,82 etc"
                 value="${data.marks ?? ""}"
             >
-
         </td>
 
         <td>
@@ -1842,9 +1976,9 @@ function addSubject(data = {}){
 
                 ${grades.map(
                     g => `
-                        <option value="${g.grade}">
-                            ${g.grade}
-                        </option>
+                    <option value="${g.grade}">
+                        ${g.grade}
+                    </option>
                     `
                 ).join("")}
 
@@ -1866,42 +2000,31 @@ function addSubject(data = {}){
             </button>
 
         </td>
-
     `;
-
 
     document
     .getElementById("subjects")
     .appendChild(row);
 
-
     if(data.grade){
-
-        row.querySelector(".grade").value =
-        data.grade;
-
+        row.querySelector(".grade").value = data.grade;
     }
-
 
     function update(){
 
         const marks =
         row.querySelector(".marks").value;
 
-
         const credit =
         Number(
             row.querySelector(".credit").value
         ) || 0;
 
-
         let grade;
-
 
         if(marks !== ""){
 
             grade = getGrade(marks);
-
 
             if(grade){
 
@@ -1910,8 +2033,7 @@ function addSubject(data = {}){
 
             }
 
-        }
-        else{
+        }else{
 
             grade =
             grades.find(
@@ -1922,11 +2044,9 @@ function addSubject(data = {}){
 
         }
 
-
         const qp =
         credit *
         (grade ? grade.qp : 0);
-
 
         row.querySelector(".qp")
         .textContent =
@@ -1934,27 +2054,14 @@ function addSubject(data = {}){
 
     }
 
-
     row.querySelector(".marks")
-    .addEventListener(
-        "input",
-        update
-    );
-
+    .addEventListener("input",update);
 
     row.querySelector(".credit")
-    .addEventListener(
-        "input",
-        update
-    );
-
+    .addEventListener("input",update);
 
     row.querySelector(".grade")
-    .addEventListener(
-        "change",
-        update
-    );
-
+    .addEventListener("change",update);
 
     row.querySelector(".delete-subject")
     .addEventListener(
@@ -1962,15 +2069,12 @@ function addSubject(data = {}){
         function(){
 
             row.remove();
-
             renumber();
 
         }
     );
 
-
     update();
-
     renumber();
 
 }
@@ -2000,11 +2104,7 @@ function renumber(){
 function getSubjects(){
 
     return [
-
-        ...document.querySelectorAll(
-            "#subjects tr"
-        )
-
+        ...document.querySelectorAll("#subjects tr")
     ].map(
         row => ({
 
@@ -2032,45 +2132,33 @@ function getSubjects(){
 
 function calculateGPA(){
 
-    const subjects =
-    getSubjects();
-
+    const subjects = getSubjects();
 
     let totalCredits = 0;
-
     let totalQP = 0;
 
+    subjects.forEach(s => {
 
-    subjects.forEach(
-        s => {
+        const grade =
+        s.marks !== ""
+        ? getGrade(s.marks)
+        : grades.find(
+            g => g.grade === s.grade
+        );
 
-            const grade =
-            s.marks !== ""
-            ? getGrade(s.marks)
-            : grades.find(
-                g =>
-                g.grade === s.grade
-            );
+        if(
+            s.credit > 0 &&
+            grade
+        ){
 
+            totalCredits += s.credit;
 
-            if(
-                s.credit > 0 &&
-                grade
-            ){
-
-                totalCredits +=
-                s.credit;
-
-
-                totalQP +=
-                s.credit *
-                grade.qp;
-
-            }
+            totalQP +=
+            s.credit * grade.qp;
 
         }
-    );
 
+    });
 
     if(totalCredits === 0){
 
@@ -2082,28 +2170,23 @@ function calculateGPA(){
 
     }
 
-
     const gpa =
     totalQP / totalCredits;
-
 
     document
     .getElementById("gpaResult")
     .textContent =
     gpa.toFixed(2);
 
-
     document
     .getElementById("credits")
     .textContent =
     totalCredits;
 
-
     document
     .getElementById("qualityPoints")
     .textContent =
     totalQP.toFixed(2);
-
 
     document
     .getElementById("status")
@@ -2112,20 +2195,16 @@ function calculateGPA(){
     ? "PASS"
     : "BELOW 2.00";
 
-
     document
     .getElementById("resultActions")
     .classList
     .remove("hidden");
 
-
     return {
-
         gpa,
         credits:totalCredits,
         qp:totalQP,
         subjects
-
     };
 
 }
@@ -2135,61 +2214,41 @@ function calculateGPA(){
 
 function saveSemester(){
 
-    const result =
-    calculateGPA();
-
+    const result = calculateGPA();
 
     if(!result){
         return;
     }
 
-
     const index =
     savedSemesters.findIndex(
         s =>
-        s.semester ===
-        semesterNumber
+        s.semester === semesterNumber
     );
-
 
     const data = {
 
         semester:semesterNumber,
-
         gpa:result.gpa,
-
         credits:result.credits,
-
         qp:result.qp,
-
         subjects:result.subjects
 
     };
 
-
     if(index >= 0){
-
-        savedSemesters[index] =
-        data;
-
-    }
-    else{
-
+        savedSemesters[index] = data;
+    }else{
         savedSemesters.push(data);
-
     }
-
 
     localStorage.setItem(
         "sindhGPASemesters",
         JSON.stringify(savedSemesters)
     );
 
-
     renderSaved();
-
     calculateCGPA();
-
 
     alert(
         "Semester saved successfully."
@@ -2202,57 +2261,41 @@ function saveSemester(){
 
 function nextSemester(){
 
-    const result =
-    calculateGPA();
-
+    const result = calculateGPA();
 
     if(!result){
         return;
     }
 
-
     const exists =
     savedSemesters.some(
         s =>
-        s.semester ===
-        semesterNumber
+        s.semester === semesterNumber
     );
-
 
     if(!exists){
 
         savedSemesters.push({
 
             semester:semesterNumber,
-
             gpa:result.gpa,
-
             credits:result.credits,
-
             qp:result.qp,
-
             subjects:result.subjects
 
         });
 
     }
 
-
     localStorage.setItem(
         "sindhGPASemesters",
         JSON.stringify(savedSemesters)
     );
 
-
     semesterNumber++;
 
-
     clearForm();
-
-
     renderSaved();
-
-
     calculateCGPA();
 
 }
@@ -2266,33 +2309,25 @@ function clearForm(){
     .getElementById("subjects")
     .innerHTML = "";
 
-
-    for(let i = 0; i < 3; i++){
-
+    for(let i=0;i<3;i++){
         addSubject();
-
     }
-
 
     document
     .getElementById("gpaResult")
     .textContent = "0.00";
 
-
     document
     .getElementById("credits")
     .textContent = "0";
-
 
     document
     .getElementById("qualityPoints")
     .textContent = "0.00";
 
-
     document
     .getElementById("status")
     .textContent = "—";
-
 
     document
     .getElementById("resultActions")
@@ -2309,15 +2344,12 @@ function renderSaved(){
     const box =
     document.getElementById("saved");
 
-
     if(savedSemesters.length === 0){
 
         box.innerHTML = "";
-
         return;
 
     }
-
 
     box.innerHTML = `
 
@@ -2331,7 +2363,6 @@ function renderSaved(){
             <div class="saved-item">
 
                 <div>
-
                     <b>
                         Semester ${s.semester}
                     </b>
@@ -2340,48 +2371,35 @@ function renderSaved(){
                         ${s.subjects.length}
                         Subjects
                     </small>
-
                 </div>
 
-
                 <div>
-
                     GPA
-
                     <strong>
                         ${Number(s.gpa).toFixed(2)}
                     </strong>
-
                 </div>
 
-
                 <div>
-
                     Credit Hours
-
                     <strong>
                         ${s.credits}
                     </strong>
-
                 </div>
 
-
                 <div>
-
                     QP
-
                     <strong>
                         ${Number(s.qp).toFixed(2)}
                     </strong>
-
                 </div>
-
 
                 <div class="saved-buttons">
 
                     <button
                         class="edit-btn"
                         onclick="editSemester(${i})"
+                        type="button"
                     >
                         ✎ Edit
                     </button>
@@ -2389,6 +2407,7 @@ function renderSaved(){
                     <button
                         class="remove-btn"
                         onclick="deleteSemester(${i})"
+                        type="button"
                     >
                         🗑 Delete
                     </button>
@@ -2411,23 +2430,18 @@ function editSemester(index){
 
     editingIndex = index;
 
-
     const data =
     savedSemesters[index];
-
 
     document
     .getElementById("editTitle")
     .textContent =
     `Semester ${data.semester}`;
 
-
     const box =
     document.getElementById("editRows");
 
-
     box.innerHTML = "";
-
 
     data.subjects.forEach(
         (s,i) => {
@@ -2435,12 +2449,9 @@ function editSemester(index){
             const row =
             document.createElement("tr");
 
-
             row.innerHTML = `
 
-                <td>
-                    ${i + 1}
-                </td>
+                <td>${i + 1}</td>
 
                 <td>
 
@@ -2479,11 +2490,9 @@ function editSemester(index){
 
                         ${grades.map(
                             g => `
-                                <option
-                                    value="${g.grade}"
-                                >
-                                    ${g.grade}
-                                </option>
+                            <option value="${g.grade}">
+                                ${g.grade}
+                            </option>
                             `
                         ).join("")}
 
@@ -2497,15 +2506,11 @@ function editSemester(index){
 
             `;
 
-
             box.appendChild(row);
-
 
             row.querySelector(
                 ".edit-grade"
-            ).value =
-            s.grade;
-
+            ).value = s.grade;
 
             function update(){
 
@@ -2514,14 +2519,12 @@ function editSemester(index){
                     ".edit-marks"
                 ).value;
 
-
                 const credit =
                 Number(
                     row.querySelector(
                         ".edit-credit"
                     ).value
                 ) || 0;
-
 
                 const grade =
                 marks !== ""
@@ -2533,7 +2536,6 @@ function editSemester(index){
                         ".edit-grade"
                     ).value
                 );
-
 
                 if(
                     marks !== "" &&
@@ -2547,7 +2549,6 @@ function editSemester(index){
 
                 }
 
-
                 row.querySelector(
                     ".edit-qp"
                 ).textContent =
@@ -2558,14 +2559,12 @@ function editSemester(index){
 
             }
 
-
             row.querySelector(
                 ".edit-marks"
             ).addEventListener(
                 "input",
                 update
             );
-
 
             row.querySelector(
                 ".edit-credit"
@@ -2574,7 +2573,6 @@ function editSemester(index){
                 update
             );
 
-
             row.querySelector(
                 ".edit-grade"
             ).addEventListener(
@@ -2582,12 +2580,10 @@ function editSemester(index){
                 update
             );
 
-
             update();
 
         }
     );
-
 
     document
     .getElementById("editBox")
@@ -2605,14 +2601,11 @@ function saveChanges(){
         return;
     }
 
-
-    const rows =
-    [
+    const rows = [
         ...document.querySelectorAll(
             "#editRows tr"
         )
     ];
-
 
     const subjects =
     rows.map(
@@ -2643,36 +2636,27 @@ function saveChanges(){
         })
     );
 
-
     let credits = 0;
-
     let qp = 0;
 
+    subjects.forEach(s => {
 
-    subjects.forEach(
-        s => {
+        const grade =
+        getGrade(s.marks);
 
-            const grade =
-            getGrade(s.marks);
+        if(
+            s.credit > 0 &&
+            grade
+        ){
 
+            credits += s.credit;
 
-            if(
-                s.credit > 0 &&
-                grade
-            ){
-
-                credits +=
-                s.credit;
-
-                qp +=
-                s.credit *
-                grade.qp;
-
-            }
+            qp +=
+            s.credit * grade.qp;
 
         }
-    );
 
+    });
 
     if(credits === 0){
 
@@ -2684,50 +2668,36 @@ function saveChanges(){
 
     }
 
+    savedSemesters[
+        editingIndex
+    ].subjects = subjects;
 
     savedSemesters[
         editingIndex
-    ].subjects =
-    subjects;
-
+    ].credits = credits;
 
     savedSemesters[
         editingIndex
-    ].credits =
-    credits;
-
+    ].qp = qp;
 
     savedSemesters[
         editingIndex
-    ].qp =
-    qp;
-
-
-    savedSemesters[
-        editingIndex
-    ].gpa =
-    qp / credits;
-
+    ].gpa = qp / credits;
 
     localStorage.setItem(
         "sindhGPASemesters",
         JSON.stringify(savedSemesters)
     );
 
-
     document
     .getElementById("editBox")
     .classList
     .add("hidden");
 
-
     editingIndex = -1;
 
-
     renderSaved();
-
     calculateCGPA();
-
 
     alert(
         "Semester updated successfully."
@@ -2745,26 +2715,20 @@ function deleteSemester(index){
             `Delete Semester ${savedSemesters[index].semester}?`
         )
     ){
-
         return;
-
     }
-
 
     savedSemesters.splice(
         index,
         1
     );
 
-
     localStorage.setItem(
         "sindhGPASemesters",
         JSON.stringify(savedSemesters)
     );
 
-
     renderSaved();
-
     calculateCGPA();
 
 }
@@ -2774,58 +2738,43 @@ function deleteSemester(index){
 
 function calculateCGPA(){
 
-    if(
-        savedSemesters.length === 0
-    ){
+    if(savedSemesters.length === 0){
 
         document
         .getElementById("cgpaResult")
         .textContent = "0.00";
-
 
         document
         .getElementById("cgpaStatus")
         .textContent =
         "Save a semester first.";
 
-
         return;
 
     }
 
-
     let credits = 0;
-
     let qp = 0;
-
 
     savedSemesters.forEach(
         s => {
 
-            credits +=
-            Number(s.credits);
-
-            qp +=
-            Number(s.qp);
+            credits += Number(s.credits);
+            qp += Number(s.qp);
 
         }
     );
-
 
     if(credits === 0){
         return;
     }
 
-
-    const cgpa =
-    qp / credits;
-
+    const cgpa = qp / credits;
 
     document
     .getElementById("cgpaResult")
     .textContent =
     cgpa.toFixed(2);
-
 
     document
     .getElementById("cgpaStatus")
@@ -2861,39 +2810,28 @@ Developed by Hafeezullah Keerio
 
 `;
 
-
     const blob =
     new Blob(
         [text],
-        {
-            type:"text/plain"
-        }
+        {type:"text/plain"}
     );
-
 
     const url =
     URL.createObjectURL(blob);
 
-
     const a =
     document.createElement("a");
 
-
     a.href = url;
-
 
     a.download =
     "University-of-Sindh-GPA-Result.txt";
 
-
     document.body.appendChild(a);
-
 
     a.click();
 
-
     a.remove();
-
 
     URL.revokeObjectURL(url);
 
@@ -2910,13 +2848,11 @@ document
 
         e.preventDefault();
 
-
         const name =
         document
         .getElementById("name")
         .value
         .trim();
-
 
         const email =
         document
@@ -2924,13 +2860,11 @@ document
         .value
         .trim();
 
-
         const subject =
         document
         .getElementById("subject")
         .value
         .trim();
-
 
         const message =
         document
@@ -2938,11 +2872,9 @@ document
         .value
         .trim();
 
-
         const finalSubject =
         subject ||
         "University of Sindh GPA Calculator";
-
 
         const body =
 `Hello Hafeezullah,
@@ -2955,21 +2887,14 @@ Message:
 
 ${message}`;
 
-
         const mailto =
         "mailto:hafeezullahkeerio23@gmail.com" +
         "?subject=" +
-        encodeURIComponent(
-            finalSubject
-        ) +
+        encodeURIComponent(finalSubject) +
         "&body=" +
-        encodeURIComponent(
-            body
-        );
+        encodeURIComponent(body);
 
-
-        window.location.href =
-        mailto;
+        window.location.href = mailto;
 
     }
 );
@@ -2986,14 +2911,12 @@ document
     }
 );
 
-
 document
 .getElementById("calculate")
 .addEventListener(
     "click",
     calculateGPA
 );
-
 
 document
 .getElementById("saveSemester")
@@ -3002,14 +2925,12 @@ document
     saveSemester
 );
 
-
 document
 .getElementById("nextSemester")
 .addEventListener(
     "click",
     nextSemester
 );
-
 
 document
 .getElementById("calculateCgpa")
@@ -3018,14 +2939,12 @@ document
     calculateCGPA
 );
 
-
 document
 .getElementById("download")
 .addEventListener(
     "click",
     downloadResult
 );
-
 
 document
 .getElementById("print")
@@ -3046,7 +2965,6 @@ document
     saveChanges
 );
 
-
 document
 .getElementById("cancelEdit")
 .addEventListener(
@@ -3062,7 +2980,6 @@ document
 
     }
 );
-
 
 document
 .getElementById("closeEdit")
@@ -3120,7 +3037,6 @@ document
     }
 );
 
-
 document
 .getElementById("goCgpa")
 .addEventListener(
@@ -3155,7 +3071,6 @@ document
     }
 );
 
-
 document
 .getElementById("closeGrading")
 .addEventListener(
@@ -3169,7 +3084,6 @@ document
 
     }
 );
-
 
 document
 .getElementById("gradingModal")
@@ -3193,20 +3107,58 @@ document
 );
 
 
-/* ================= THEME ================= */
+/* ==================================================
+   DARK MODE BUTTON
+================================================== */
 
-document
-.getElementById("themeBtn")
-.addEventListener(
+const themeBtn =
+document.getElementById("themeBtn");
+
+themeBtn.addEventListener(
     "click",
     function(){
 
-        alert(
-            "Theme option can be customized later."
-        );
+        document.body.classList.toggle("dark");
+
+        if(
+            document.body.classList.contains("dark")
+        ){
+
+            themeBtn.textContent = "☀️";
+
+            localStorage.setItem(
+                "sindhGPADarkMode",
+                "enabled"
+            );
+
+        }else{
+
+            themeBtn.textContent = "🌙";
+
+            localStorage.setItem(
+                "sindhGPADarkMode",
+                "disabled"
+            );
+
+        }
 
     }
 );
+
+
+/* ================= REMEMBER THEME ================= */
+
+if(
+    localStorage.getItem(
+        "sindhGPADarkMode"
+    ) === "enabled"
+){
+
+    document.body.classList.add("dark");
+
+    themeBtn.textContent = "☀️";
+
+}
 
 
 /* ================= INITIAL SUBJECTS ================= */
@@ -3221,9 +3173,7 @@ for(
 
 }
 
-
 renderSaved();
-
 calculateCGPA();
 
 </script>
