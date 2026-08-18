@@ -973,7 +973,53 @@ body.dark .developer{
 body.dark footer{
     background:#061812;
 }
+.qp-info{
+    margin-top:20px;
+    padding:20px;
+    border-radius:14px;
+    background:#f0f8f4;
+    border:1px solid #d6e8df;
+}
 
+.qp-info h3{
+    color:#087451;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.qp-info p{
+    color:#68766f;
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:8px;
+}
+
+.qp-formula{
+    background:white;
+    border:1px solid #dce8e2;
+    border-radius:10px;
+    padding:12px 14px;
+    margin:12px 0 15px;
+    font-weight:bold;
+}
+
+.qp-examples{
+    display:grid;
+    gap:7px;
+    margin-top:10px;
+}
+
+.qp-example{
+    padding:9px 12px;
+    background:white;
+    border-radius:8px;
+    border:1px solid #e0ebe6;
+    font-size:13px;
+}
+
+.qp-example strong{
+    color:#087451;
+}
 /* ================= RESPONSIVE ================= */
 
 @media(max-width:850px){
@@ -998,138 +1044,322 @@ body.dark footer{
 
 @media(max-width:600px){
 
+/* NAVBAR */
 .navbar{
-    padding:0 4%;
+    height:60px;
+    padding:0 15px;
 }
 
 .nav-links{
     display:none;
 }
 
+.brand-title{
+    font-size:13px;
+}
+
+.brand-subtitle{
+    font-size:10px;
+}
+
+.logo{
+    width:36px;
+    height:36px;
+}
+
+.theme-btn{
+    width:34px;
+    height:34px;
+    font-size:15px;
+}
+
+
+/* HERO */
 .hero{
-    padding:55px 6%;
+    min-height:auto;
+    padding:55px 20px;
     text-align:center;
+}
+
+.hero-content{
     width:100%;
-    box-sizing:border-box;
 }
 
 .hero h1{
-    font-size:clamp(28px, 8vw, 42px);
-    line-height:1.2;
+    font-size:34px;
+    line-height:1.15;
+    letter-spacing:-1px;
+}
+
+.hero p{
+    font-size:14px;
+    line-height:1.6;
 }
 
 .hero-buttons{
     justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
 }
 
-.section{
-    padding:45px 12px;
+.hero-buttons .btn{
     width:100%;
-    box-sizing:border-box;
+}
+
+
+/* SECTIONS */
+.section{
+    padding:50px 12px;
+    width:100%;
     overflow:hidden;
 }
 
-.panel{
-    padding:12px;
+.heading{
     width:100%;
-    max-width:100%;
-    box-sizing:border-box;
+    margin-bottom:25px;
 }
 
-.result{
+.heading h2{
+    font-size:27px;
+}
+
+.heading p{
+    font-size:13px;
+}
+
+
+/* PANEL */
+.panel{
+    width:100%;
+    padding:14px;
+    border-radius:14px;
+}
+
+.panel-header{
     flex-direction:column;
     align-items:flex-start;
-    width:100%;
-    box-sizing:border-box;
 }
 
-.form-row{
+.panel-header h3{
+    font-size:17px;
+}
+
+.panel-header small{
+    font-size:11px;
+}
+
+.panel-header .btn{
+    width:100%;
+}
+
+
+/* GPA TABLE */
+.table-wrap{
+    width:100%;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+.table-wrap table{
+    min-width:650px;
+}
+
+.table-wrap th,
+.table-wrap td{
+    padding:8px;
+    font-size:12px;
+}
+
+.input,
+.select{
+    padding:9px;
+    font-size:12px;
+}
+
+
+/* ACTION BUTTONS */
+.actions{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+
+.actions .btn{
+    width:100%;
+}
+
+
+/* RESULT */
+.result{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:20px 15px;
+    gap:20px;
+}
+
+.gpa-number{
+    font-size:46px;
+}
+
+.stats{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.stat{
+    padding:10px;
+    background:rgba(255,255,255,.35);
+    border-radius:10px;
+}
+
+
+/* SAVED SEMESTERS */
+.saved-item{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+    padding:15px;
+}
+
+.saved-buttons{
+    width:100%;
+}
+
+.saved-buttons button{
+    flex:1;
+}
+
+
+/* EDIT BOX */
+.edit-box{
+    padding:14px;
+}
+
+.edit-header{
+    gap:10px;
+}
+
+
+/* CGPA */
+.cgpa-number{
+    font-size:50px;
+}
+
+
+/* CONTACT */
+.contact-section{
+    padding:55px 12px;
+}
+
+.contact-container{
     grid-template-columns:1fr;
     width:100%;
 }
 
-input,
-select,
-textarea{
-    width:100%;
-    max-width:100%;
-    box-sizing:border-box;
+.contact-info{
+    padding:28px 20px;
 }
 
-button{
-    max-width:100%;
-    box-sizing:border-box;
+.contact-info h2{
+    font-size:28px;
 }
 
-.contact-info,
 .contact-form{
-    padding:25px 18px;
-    width:100%;
-    box-sizing:border-box;
+    padding:28px 20px;
 }
 
+.form-row{
+    grid-template-columns:1fr;
+}
+
+
+/* DEVELOPER */
 .developer{
-    padding:50px 15px;
-    width:100%;
-    box-sizing:border-box;
+    padding:55px 15px;
 }
 
 .developer-card{
-    padding:25px 18px;
-    width:100%;
-    box-sizing:border-box;
+    padding:28px 20px;
+    flex-direction:column;
     align-items:center;
     text-align:center;
 }
 
+.developer-photo{
+    width:100px;
+    height:100px;
+    min-width:100px;
+}
+
+.developer-info h2{
+    font-size:26px;
+}
+
 .developer-description{
-    margin-left:auto;
-    margin-right:auto;
-    max-width:100%;
+    font-size:13px;
 }
 
+
+/* FOOTER */
 footer{
+    padding:22px 15px;
+    flex-direction:column;
     justify-content:center;
+    align-items:center;
     text-align:center;
-    width:100%;
-    box-sizing:border-box;
 }
 
 
-/* ===== TABLE ===== */
+/* GRADING MODAL */
+.modal{
+    padding:10px;
+}
 
-table{
+.modal-box{
     width:100%;
-    max-width:100%;
-    box-sizing:border-box;
+    max-height:92vh;
+    padding:18px;
+    border-radius:14px;
+}
+
+.modal-header h2{
+    font-size:20px;
+}
+
+.modal-box > table{
+    width:100%;
+}
+
+.modal-box > table th,
+.modal-box > table td{
+    padding:8px 6px;
+    font-size:12px;
 }
 
 
-/* ===== QUALITY POINTS BOX ===== */
-
+/* QUALITY POINTS */
 .qp-info{
     width:100%;
-    max-width:100%;
     padding:15px;
     margin-top:18px;
+    border-radius:12px;
     box-sizing:border-box;
 }
 
 .qp-info h3{
     font-size:16px;
-    line-height:1.4;
 }
 
 .qp-info p{
     font-size:12px;
-    line-height:1.5;
+    line-height:1.6;
 }
 
 .qp-formula{
     width:100%;
-    max-width:100%;
     padding:10px;
     font-size:12px;
     box-sizing:border-box;
@@ -1138,82 +1368,56 @@ table{
 }
 
 .qp-examples{
-    width:100%;
-    max-width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
 }
 
 .qp-example{
     width:100%;
-    max-width:100%;
-    padding:8px 10px;
+    padding:9px 10px;
     font-size:12px;
     box-sizing:border-box;
 }
 
 
-/* ===== MOBILE CALCULATOR ===== */
-
-.subjects{
-    width:100%;
-    max-width:100%;
-    overflow-x:auto;
-}
-
-.semester{
-    width:100%;
-    max-width:100%;
-    box-sizing:border-box;
 }
 
 
-/* ===== SMALL MOBILE ===== */
-
+/* EXTRA SMALL PHONES */
 @media(max-width:400px){
 
-    .hero{
-        padding:50px 5%;
-    }
+.hero{
+    padding:45px 15px;
+}
 
-    .hero h1{
-        font-size:28px;
-    }
+.hero h1{
+    font-size:30px;
+}
 
-    .section{
-        padding:40px 8px;
-    }
+.section{
+    padding:40px 10px;
+}
 
-    .panel{
-        padding:10px;
-    }
+.panel{
+    padding:11px;
+}
 
-    .contact-info,
-    .contact-form{
-        padding:20px 14px;
-    }
+.stats{
+    grid-template-columns:1fr;
+}
 
-    .developer-card{
-        padding:22px 15px;
-    }
+.contact-info,
+.contact-form{
+    padding:23px 16px;
+}
 
-    button{
-        font-size:13px;
-        padding:9px 12px;
-    }
+.developer-card{
+    padding:25px 15px;
+}
 
-    input,
-    select,
-    textarea{
-        font-size:14px;
-    }
-
-    .qp-info{
-        padding:12px;
-    }
-
-    .qp-example{
-        font-size:11px;
-    }
-
+.modal-box{
+    padding:14px;
 }
 
 }
