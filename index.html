@@ -998,111 +998,224 @@ body.dark footer{
 
 @media(max-width:600px){
 
-    .navbar{
-        padding:0 4%;
-    }
+.navbar{
+    padding:0 4%;
+}
 
-    .nav-links{
-        display:none;
-    }
+.nav-links{
+    display:none;
+}
+
+.hero{
+    padding:55px 6%;
+    text-align:center;
+    width:100%;
+    box-sizing:border-box;
+}
+
+.hero h1{
+    font-size:clamp(28px, 8vw, 42px);
+    line-height:1.2;
+}
+
+.hero-buttons{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.section{
+    padding:45px 12px;
+    width:100%;
+    box-sizing:border-box;
+    overflow:hidden;
+}
+
+.panel{
+    padding:12px;
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+.result{
+    flex-direction:column;
+    align-items:flex-start;
+    width:100%;
+    box-sizing:border-box;
+}
+
+.form-row{
+    grid-template-columns:1fr;
+    width:100%;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+button{
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+.contact-info,
+.contact-form{
+    padding:25px 18px;
+    width:100%;
+    box-sizing:border-box;
+}
+
+.developer{
+    padding:50px 15px;
+    width:100%;
+    box-sizing:border-box;
+}
+
+.developer-card{
+    padding:25px 18px;
+    width:100%;
+    box-sizing:border-box;
+    align-items:center;
+    text-align:center;
+}
+
+.developer-description{
+    margin-left:auto;
+    margin-right:auto;
+    max-width:100%;
+}
+
+footer{
+    justify-content:center;
+    text-align:center;
+    width:100%;
+    box-sizing:border-box;
+}
+
+
+/* ===== TABLE ===== */
+
+table{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+
+/* ===== QUALITY POINTS BOX ===== */
+
+.qp-info{
+    width:100%;
+    max-width:100%;
+    padding:15px;
+    margin-top:18px;
+    box-sizing:border-box;
+}
+
+.qp-info h3{
+    font-size:16px;
+    line-height:1.4;
+}
+
+.qp-info p{
+    font-size:12px;
+    line-height:1.5;
+}
+
+.qp-formula{
+    width:100%;
+    max-width:100%;
+    padding:10px;
+    font-size:12px;
+    box-sizing:border-box;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+.qp-examples{
+    width:100%;
+    max-width:100%;
+}
+
+.qp-example{
+    width:100%;
+    max-width:100%;
+    padding:8px 10px;
+    font-size:12px;
+    box-sizing:border-box;
+}
+
+
+/* ===== MOBILE CALCULATOR ===== */
+
+.subjects{
+    width:100%;
+    max-width:100%;
+    overflow-x:auto;
+}
+
+.semester{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+
+/* ===== SMALL MOBILE ===== */
+
+@media(max-width:400px){
 
     .hero{
-        padding:65px 7%;
-        text-align:center;
+        padding:50px 5%;
     }
 
-    .hero-buttons{
-        justify-content:center;
+    .hero h1{
+        font-size:28px;
     }
 
     .section{
-        padding:55px 12px;
+        padding:40px 8px;
     }
 
     .panel{
-        padding:12px;
-    }
-
-    .result{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .form-row{
-        grid-template-columns:1fr;
+        padding:10px;
     }
 
     .contact-info,
     .contact-form{
-        padding:28px 22px;
-    }
-
-    .developer{
-        padding:60px 15px;
+        padding:20px 14px;
     }
 
     .developer-card{
-        padding:30px 24px;
-        align-items:center;
-        text-align:center;
+        padding:22px 15px;
     }
 
-    .developer-description{
-        margin-left:auto;
-        margin-right:auto;
+    button{
+        font-size:13px;
+        padding:9px 12px;
     }
 
-    footer{
-        justify-content:center;
-        text-align:center;
+    input,
+    select,
+    textarea{
+        font-size:14px;
     }
-}
-.qp-info{
-    margin-top:20px;
-    padding:20px;
-    border-radius:14px;
-    background:#f0f8f4;
-    border:1px solid #d6e8df;
+
+    .qp-info{
+        padding:12px;
+    }
+
+    .qp-example{
+        font-size:11px;
+    }
+
 }
 
-.qp-info h3{
-    color:#087451;
-    font-size:18px;
-    margin-bottom:10px;
-}
-
-.qp-info p{
-    color:#68766f;
-    font-size:13px;
-    line-height:1.6;
-    margin-bottom:8px;
-}
-
-.qp-formula{
-    background:white;
-    border:1px solid #dce8e2;
-    border-radius:10px;
-    padding:12px 14px;
-    margin:12px 0 15px;
-    font-weight:bold;
-}
-
-.qp-examples{
-    display:grid;
-    gap:7px;
-    margin-top:10px;
-}
-
-.qp-example{
-    padding:9px 12px;
-    background:white;
-    border-radius:8px;
-    border:1px solid #e0ebe6;
-    font-size:13px;
-}
-
-.qp-example strong{
-    color:#087451;
 }
 </style>
 </head>
