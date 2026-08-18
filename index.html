@@ -1057,7 +1057,53 @@ body.dark footer{
         text-align:center;
     }
 }
+.qp-info{
+    margin-top:20px;
+    padding:20px;
+    border-radius:14px;
+    background:#f0f8f4;
+    border:1px solid #d6e8df;
+}
 
+.qp-info h3{
+    color:#087451;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.qp-info p{
+    color:#68766f;
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:8px;
+}
+
+.qp-formula{
+    background:white;
+    border:1px solid #dce8e2;
+    border-radius:10px;
+    padding:12px 14px;
+    margin:12px 0 15px;
+    font-weight:bold;
+}
+
+.qp-examples{
+    display:grid;
+    gap:7px;
+    margin-top:10px;
+}
+
+.qp-example{
+    padding:9px 12px;
+    background:white;
+    border-radius:8px;
+    border:1px solid #e0ebe6;
+    font-size:13px;
+}
+
+.qp-example strong{
+    color:#087451;
+}
 </style>
 </head>
 
@@ -1193,9 +1239,7 @@ body.dark footer{
                     Semester GPA Calculator
                 </h3>
 
-                <small>
-                    QP = Credit Hours × Quality Value
-                </small>
+              <small>Please enter Credit Hours and Marks</small>
 
             </div>
 
@@ -1817,7 +1861,7 @@ body.dark footer{
                     </th>
 
                     <th>
-                        Quality Points
+                        Grade Points
                     </th>
 
                 </tr>
@@ -1884,6 +1928,52 @@ body.dark footer{
 
         </table>
 
+
+        <!-- QUALITY POINTS EXPLANATION -->
+
+        <div class="qp-info">
+
+            <h3>
+                How Quality Points Are Calculated
+            </h3>
+
+            <p>
+                Quality Points are calculated by multiplying
+                Credit Hours by Grade Point.
+            </p>
+
+            <div class="qp-formula">
+                Quality Points = Credit Hours × Grade Point
+            </div>
+
+            <p>
+                <strong>Examples:</strong>
+            </p>
+
+            <div class="qp-examples">
+
+                <div class="qp-example">
+                    A+ → 4.00 × 3 CH =
+                    <strong>12.00 QP</strong>
+                </div>
+
+                <div class="qp-example">
+                    A+ → 4.00 × 2 CH =
+                    <strong>8.00 QP</strong>
+                </div>
+
+                <div class="qp-example">
+                    B+ → 3.20 × 3 CH =
+                    <strong>9.60 QP</strong>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+
     </div>
 
 </div>
@@ -1940,7 +2030,7 @@ function addSubject(data = {}){
         <td>
             <input
                 class="input subject"
-                placeholder="Subject name"
+                placeholder="Subject name (Optional)"
                 value="${data.subject || ""}"
             >
         </td>
