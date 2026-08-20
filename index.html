@@ -1239,7 +1239,7 @@ body.dark footer{
                     Semester GPA Calculator
                 </h3>
 
-              <small>Please enter Credit Hours and Marks</small>
+              <small>Please Enter Credit Hours and Marks</small>
 
             </div>
 
@@ -2880,115 +2880,72 @@ function calculateCGPA(){
 
 function downloadResult(){
 
-    const text = `
+const gpa = document.getElementById("gpaResult").textContent;
+const credits = document.getElementById("credits").textContent;
+const qp = document.getElementById("qualityPoints").textContent;
+const status = document.getElementById("status").textContent;
 
+const subjects = getSubjects();
+
+let subjectText = "";
+
+subjects.forEach((s, index) => {
+
+    const grade = s.marks !== ""
+        ? getGrade(s.marks)
+        : grades.find(g => g.grade === s.grade);
+
+    const qualityPoints = s.credit * (grade ? grade.qp : 0);
+
+    subjectText +=
+        `${index + 1}. ${s.subject || "Subject"} | ` +
+        `Credit Hours: ${s.credit} | ` +
+        `Marks: ${s.marks || "-"} | ` +
+        `Grade: ${grade ? grade.grade : "-"} | ` +
+        `Quality Points: ${qualityPoints.toFixed(2)}\n`;
+});
+
+const text =
+`========================================
 UNIVERSITY OF SINDH GPA CALCULATOR
+========================================
 
-GPA:
-${document.getElementById("gpaResult").textContent}
+GPA: ${gpa}
 
-Credit Hours:
-${document.getElementById("credits").textContent}
+Credit Hours: ${credits}
 
-Quality Points:
-${document.getElementById("qualityPoints").textContent}
+Quality Points: ${qp}
 
-Status:
-${document.getElementById("status").textContent}
+Status: ${status}
 
+----------------------------------------
+SUBJECT DETAILS
+----------------------------------------
+
+${subjectText}
+
+========================================
 Developed by Hafeezullah Keerio
+========================================`;
 
-`;
-
-    const blob =
-    new Blob(
-        [text],
-        {type:"text/plain"}
-    );
-
-    const url =
-    URL.createObjectURL(blob);
-
-    const a =
-    document.createElement("a");
-
-    a.href = url;
-
-    a.download =
-    "University-of-Sindh-GPA-Result.txt";
-
-    document.body.appendChild(a);
-
-    a.click();
-
-    a.remove();
-
-    URL.revokeObjectURL(url);
-
-}
-
-
-/* ================= CONTACT FORM ================= */
-
-document
-.getElementById("contactForm")
-.addEventListener(
-    "submit",
-    function(e){
-
-        e.preventDefault();
-
-        const name =
-        document
-        .getElementById("name")
-        .value
-        .trim();
-
-        const email =
-        document
-        .getElementById("email")
-        .value
-        .trim();
-
-        const subject =
-        document
-        .getElementById("subject")
-        .value
-        .trim();
-
-        const message =
-        document
-        .getElementById("message")
-        .value
-        .trim();
-
-        const finalSubject =
-        subject ||
-        "University of Sindh GPA Calculator";
-
-        const body =
-`Hello Hafeezullah,
-
-Name: ${name}
-
-Email: ${email}
-
-Message:
-
-${message}`;
-
-        const mailto =
-        "mailto:hafeezullahkeerio23@gmail.com" +
-        "?subject=" +
-        encodeURIComponent(finalSubject) +
-        "&body=" +
-        encodeURIComponent(body);
-
-        window.location.href = mailto;
-
-    }
+const blob = new Blob(
+    [text],
+    { type: "text/plain;charset=utf-8" }
 );
 
+const url = URL.createObjectURL(blob);
+
+const a = document.createElement("a");
+
+a.href = url;
+a.download = "University-of-Sindh-GPA-Result.txt";
+
+document.body.appendChild(a);
+a.click();
+document.body.removeChild(a);
+
+URL.revokeObjectURL(url);
+}
 
 /* ================= BUTTONS ================= */
 
